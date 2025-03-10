@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brincadeira de Pegadinha</title>
+    <style>
+        /* Estilo para o botão */
+        #playButton {
+            padding: 20px 40px;
+            font-size: 24px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        #playButton:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <h1>Brincadeira de Pegadinha!</h1>
+    <p>Clique no botão abaixo para ouvir o áudio!</p>
+    
+    <!-- Botão para reproduzir o áudio -->
+    <button id="playButton" onclick="playAudio()">Clique para ouvir o áudio</button>
+    
+    <!-- Elemento de áudio (inicialmente não carregado até clicar) -->
+    <audio id="audio" preload="auto">
+        <source src="https://w.soundcloud.com/player/?url=https%3A//soundcloud.com/nicollas-andrade-592355851/ai-chaves-estourado-mp3&color=e7ddc8&auto_play=true&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true" type="audio/mpeg">
+        Seu navegador não suporta o elemento de áudio.
+    </audio>
+
+    <script>
+        // Função para tocar o áudio ao clicar no botão
+        function playAudio() {
+            var audio = document.getElementById("audio");
+            audio.play();  // Começa a reprodução do áudio
+            document.getElementById("playButton").style.display = "none";  // Oculta o botão após clicar
+        }
+    </script>
+</body>
+</html>
